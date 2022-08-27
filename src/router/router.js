@@ -4,6 +4,7 @@ import Vue from "vue"
 import HomePage from "@/pages/HomePage.vue";
 import CalendarPage from "@/pages/CalendarPage.vue";
 import ToolsPage from "@/pages/ToolsPage.vue";
+import FileNotFoundPage from "@/pages/FileNotFoundPage.vue"
 
 Vue.use(Router)
 
@@ -30,8 +31,13 @@ export default new Router({
             component: ToolsPage
         },
         {
+            path: "/404",
+            name: "FileNotFoundPage",
+            component: FileNotFoundPage
+        },
+        {
             path: "*",
-            redirect: "/search"
+            redirect: "/404"
         }
     ]
 })

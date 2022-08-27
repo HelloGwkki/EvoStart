@@ -17,6 +17,11 @@
         </v-toolbar>
 
         <v-navigation-drawer v-model="drawer" app temporary>
+            <v-card class="mx-auto" tile flat>
+                <v-img src="https://img1.imgtp.com/2022/08/27/zp6XB0S0.jpg">
+                    <v-card-text class="white--text text-h5 mt-16">春茶の主页</v-card-text>
+                </v-img>
+            </v-card>
             <v-list nav dense>
                 <v-list-item-group v-model="group">
                     <v-list-item @click="drawerItemClicked('home')">
