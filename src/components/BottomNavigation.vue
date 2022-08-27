@@ -1,9 +1,9 @@
 <template>
     <v-bottom-navigation id="bottomNav" v-model="bottomNavigationModel" grow shift>
-        <v-btn to="/calendar" exact>
-            <span>日历</span>
+        <v-btn to="/collections" exact>
+            <span>收藏</span>
 
-            <v-icon>mdi-calendar</v-icon>
+            <v-icon>mdi-star</v-icon>
         </v-btn>
 
         <v-btn to="/" exact>
