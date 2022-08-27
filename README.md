@@ -1,24 +1,9 @@
-# homepage
+# 春茶的主页
 
-## Project setup
-```
-yarn install
-```
+---
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Todos:
+- [ ] 拆分组件 `HomepageNavigation.vue`
+- [ ] 删除页面 `CalendarPage.vue`
+- [ ] 添加页面 `CollectionsPage.vue`
+- [ ] 完成页面 `ToolsPage.vue`

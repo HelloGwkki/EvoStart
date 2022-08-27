@@ -1,0 +1,40 @@
+@font-face {
+    font-family: HarmonySans;
+    src: url(https://cdn.jsdelivr.net/gh/HelloGwkki/hellogwkki.github.io@main/HarmonyOS_Sans_Black.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.theme--light .v-application--wrap {
+    background-image: url(https://img1.imgtp.com/2022/08/27/CGVRkqtn.png) !important;
+    background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#routerView {
+    height:100%
+}
+
+.theme--light #HomepageContent {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.theme--light #appbar,
+.theme--light #bottomNav {
+    background-color: rgba(255, 255, 255, .4);
+}
+
+#HomepageContent {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#HomepageClock {
+    font-family: HarmonySans;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
