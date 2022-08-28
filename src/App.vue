@@ -9,7 +9,9 @@
         <!--Padding for appbar-->
         <div :style="{ 'padding-top': toolbarHeight + 'px' }"></div>
 
-        <router-view id="routerView"></router-view>
+        <transition name="fade" mode="out-in">
+            <router-view id="routerView"></router-view>
+        </transition>
 
         <!--bottom navigation bar-->
         <BottomNavigation />
@@ -40,3 +42,15 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 300ms ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>

@@ -20,7 +20,7 @@
                 <v-list-item>
                     <v-list-item-content>
                         <v-list-item-title>时钟显示到位</v-list-item-title>
-                        <v-list-item-subtitle>“毫秒”选项在部分设备上显示不佳</v-list-item-subtitle>
+                        <v-list-item-subtitle class="amber--text">“毫秒”选项在部分设备上显示不佳</v-list-item-subtitle>
                     </v-list-item-content>
                     <v-spacer></v-spacer>
                     <v-btn-toggle v-model="timeDisplayToModel" mandatory rounded>
