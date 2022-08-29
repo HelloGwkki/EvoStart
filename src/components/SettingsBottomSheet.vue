@@ -16,7 +16,12 @@
                         <v-btn color="primary" @click="dismiss">Sodayo</v-btn>
                     </template>
                 </v-banner>
-                <v-subheader>设置</v-subheader>
+
+                <v-subheader>
+                    <v-icon>mdi-cogs</v-icon>
+                    设置
+                </v-subheader>
+
                 <v-list-item>
                     <v-list-item-content>
                         <v-list-item-title>时钟显示到位</v-list-item-title>
@@ -35,6 +40,23 @@
                         </v-btn>
                     </v-btn-toggle>
                 </v-list-item>
+
+                <v-subheader>
+                    <v-icon>mdi-beaker</v-icon>
+                    实验室
+                </v-subheader>
+
+                <v-list-item>
+                    <v-list-item-content>
+                        <v-list-item-title>神魂颠倒</v-list-item-title>
+                        <v-list-item-subtitle>（物理）</v-list-item-subtitle>
+                    </v-list-item-content>
+                    <v-spacer></v-spacer>
+                    <v-btn @click="reversePage" :disabled="reverseBtnDisable">
+                        {{ reverseBtnDisable ? "哈哈" : "啥？" }}
+                    </v-btn>
+                </v-list-item>
+
                 <v-footer padless>
                     <v-col
                     class="text-center"
@@ -58,18 +80,30 @@
 </template>
 
 <script>
+import { animate } from 'motion';
+
 export default {
     name: "SettingsBottomSheet",
 
     data() {
         return {
-            timeDisplayToModel: this.$cookies.get("timeDisplayTo")
+            timeDisplayToModel: this.$cookies.get("timeDisplayTo"),
+            reverseBtnDisable: false
         }
     },
 
     methods: {
         selectTimeDisplayToItem(item) {
             this.$cookies.set("timeDisplayTo", item);
+        },
+        
+        reversePage() {
+                animate(
+                    "#app",
+                    { transform: "rotate(180deg)" },
+                    { duration: 6 }
+                );
+            this.reverseBtnDisable = true
         }
     },
 

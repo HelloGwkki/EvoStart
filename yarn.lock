@@ -3269,10 +3269,10 @@ faye-websocket@^0.11.3:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fetch-jsonp@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/fetch-jsonp/-/fetch-jsonp-1.2.1.tgz#a3ea630a992ae594cfbf5676e7f5fe4d2f8f03aa"
-  integrity sha512-5UwejksxssYwlwl/9OhEQU+OrVaxdChOQntpJO/GUw6NpfPS6fd08fPvbNOq0Ym6hxfLWD6cGN0Ln/V/hWcluw==
+fetch-jsonp@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/fetch-jsonp/-/fetch-jsonp-1.2.2.tgz#c98923191390119a8eae401a9cbe75845230e000"
+  integrity sha512-8rQTSU3G2k9VwpsTLpuUQ8Ix7Yv1bZDGcOUGr4me0F7pxyKxMH9PSBXF6tPMx3fca9DICYwztDa1KgOTeAdTWg==
 
 figures@^2.0.0:
   version "2.0.0"
