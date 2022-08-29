@@ -5,6 +5,9 @@
 </template>
 
 <script>
+import { animate } from 'motion';
+
+
 export default {
     name: "HomepageClock",
 
@@ -19,6 +22,11 @@ export default {
         this.DateUpdater = setInterval(() => {
             that.newDate = new Date()
         });
+        animate(
+            "#HomepageClock",
+            { opacity: 1, transform: "none" },
+            { delay: .2, duration:.5, easing: [0, .25, .75, 1] }
+        )
     },
 
     methods: {
@@ -41,3 +49,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+#HomepageClock {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+</style>

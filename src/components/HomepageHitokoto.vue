@@ -1,10 +1,12 @@
 <template>
-    <p class="text-subtitle-2 text--secondary">
+    <p class="text-subtitle-2 text--secondary" id="hitokoto">
         {{ hitokoto }}
     </p>
 </template>
 
 <script>
+import { animate } from 'motion';
+
 
 export default {
     name: "HomepageHitokoto",
@@ -24,6 +26,18 @@ export default {
         }).then(function (hitokoto) {
             that.hitokoto = hitokoto;
         });
+
+        animate(
+            "#hitokoto",
+            { opacity: 1 },
+            { delay: .5, duration:.2 }
+        )
     }
 }
 </script>
+
+<style scoped>
+#hitokoto {
+    opacity: 0;
+}
+</style>

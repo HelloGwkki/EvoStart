@@ -18,6 +18,7 @@
 
         <!--Bottom Sheet-->
         <SettingsBottomSheet />
+        
     </v-app>
 </template>
 
@@ -25,6 +26,7 @@
 import HomepageNavigation from "@/components/HomepageNavigation.vue";
 import BottomNavigation from "@/components/BottomNavigation.vue";
 import SettingsBottomSheet from "@/components/SettingsBottomSheet.vue";
+
 
 export default {
     name: 'App',
