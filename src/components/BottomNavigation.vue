@@ -1,6 +1,6 @@
 <template>
     <v-bottom-navigation id="bottomNav" v-model="bottomNavigationModel" grow shift>
-        <v-btn to="/collections" exact>
+        <v-btn to="/collections">
             <span>收藏</span>
 
             <v-icon>mdi-star</v-icon>
@@ -12,7 +12,7 @@
             <v-icon>mdi-magnify</v-icon>
         </v-btn>
 
-        <v-btn to="/tools" exact>
+        <v-btn to="/tools">
             <span>工具</span>
 
             <v-icon>mdi-hammer-screwdriver</v-icon>

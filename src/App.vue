@@ -40,6 +40,10 @@ export default {
             return this.$vuetify.application.top;
         }
     },
+
+    mounted() {
+        this.$vuetify.theme.dark = this.$store.state.preferredDark;
+    }
 };
 </script>
 
