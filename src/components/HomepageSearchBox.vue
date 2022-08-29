@@ -127,7 +127,7 @@ export default {
             switch (this.searchEngine) {
                 case "baidu":
                     FetchJsonp(
-                        "http://suggestion.baidu.com/su?cb=callback&wd=" + this.searchBoxSyncString,
+                        "https://suggestion.baidu.com/su?cb=callback&wd=" + this.searchBoxSyncString,
                         { jsonpCallbackFunction: "callback" }
                     )
                         .then(function (res) {
@@ -165,7 +165,7 @@ export default {
 
                 case "google":
                     FetchJsonp(
-                        "http://suggestqueries.google.com/complete/search?client=youtube&jsonp=callback&q=" + this.searchBoxSyncString,
+                        "https://suggestqueries.google.com/complete/search?client=youtube&jsonp=callback&q=" + this.searchBoxSyncString,
                         { jsonpCallbackFunction: "callback" }
                     )
                     .then(function (response) {
