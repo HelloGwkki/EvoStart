@@ -1,6 +1,7 @@
-# `DEV`@春茶的主页
+# 春茶的主页
 
-[点我看看看看](https://homepage.chuncha-nya.tk/)
+[main 分支](https://homepage.chuncha.tk/)
+[Dev 分支](https://homepage-preview.chuncha.tk/)
 
 ---
 
