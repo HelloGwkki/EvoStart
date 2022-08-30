@@ -1,8 +1,7 @@
 <template>
     <v-autocomplete solo hide-details hide-no-data hide-no-details auto-select-first shaped ref="SearchBox"
         :label="'使用' + searchEngineAlias[searchEngineList.indexOf(searchEngine)] + '搜索...'" @keyup.enter="GoSearch"
-        :loading="searchBoxLoading" :items="searchBoxSuggestItems" :search-input.sync="searchBoxSyncString"
-        @click:append="GoSearch">
+        :loading="searchBoxLoading" :items="searchBoxSuggestItems" :search-input.sync="searchBoxSyncString">
         <template v-slot:prepend-inner>
             <v-menu transition="slide-y-transition">
                 <template v-slot:activator="{ on, attrs }">
@@ -49,6 +48,9 @@
                     </v-list-item-group>
                 </v-list>
             </v-menu>
+        </template>
+        <template v-slot:append>
+            <v-icon></v-icon>
         </template>
     </v-autocomplete>
 </template>
@@ -190,7 +192,7 @@ export default {
             }
 
             this.searchBoxLoading = false
-        }, 300)
+        }, 400)
     }
 }
 </script>
