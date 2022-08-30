@@ -6,8 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        bottomSheetModel: false,
-        preferredDark: usePreferredDark()
+        bottomSheetModel: false
     },
     mutations: {
         changeBottomSheetModel(state){
