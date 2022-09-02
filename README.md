@@ -1,13 +1,49 @@
 # 春茶的主页
 
-[main 分支](https://homepage.chuncha.tk/)
-[Dev 分支](https://homepage-preview.chuncha.tk/)
+[main 分支](https://evostart.chuncha.tk/)
+
+[Dev 分支](https://evostart-preview.chuncha.tk/)
 
 ---
 
-## Todos:
-- [ ] 拆分组件 `HomepageNavigation.vue`
-- [ ] 删除页面 `CalendarPage.vue`
-- [ ] 添加页面 `CollectionsPage.vue`
-- [ ] 完成页面 `ToolsPage.vue`
-- [x] **增加搜索框自动联想功能**
+### 安装
+
+1. 拉取仓库
+    
+    ```sh
+    $ git clone https://github.com/evostart/startpage.git
+    ```
+
+2. 安装依赖
+    
+    (npm)
+    ```sh
+    $ npm i
+    ```
+    
+    或者
+    
+    (yarn)
+    
+    ```sh
+    $ yarn install
+    ```
+
+3. 用你的编辑器打开整个项目
+
+
+### 生成可部署文件
+
+(npm)
+```sh
+$ npm run build
+```
+
+(yarn)
+```sh
+$ yarn build
+```
+
+---
+
+没啥好写的了...
