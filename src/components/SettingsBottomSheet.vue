@@ -65,7 +65,7 @@
                     class="text-center"
                     cols="12"
                     >
-                    纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作
+                    纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作 - {{ gitBranch }}@{{ gitCommitHash }}
                     <br />
                     <v-btn href="https://github.com/HelloGwkki/EvoStart" target="_blank" text>
                         <v-icon>mdi-github</v-icon>
@@ -89,7 +89,9 @@ export default {
     data() {
         return {
             timeDisplayToModel: this.$cookies.get("timeDisplayTo"),
-            reverseBtnDisable: false
+            reverseBtnDisable: false,
+            gitBranch: process.env.GIT_BRANCH,
+            gitCommitHash: process.env.GIT_COMMITHASH.substring(0, 6)
         }
     },
 
