@@ -129,8 +129,8 @@ export default {
             switch (this.searchEngine) {
                 case "baidu":
                     FetchJsonp(
-                        "https://suggestion.baidu.com/su?cb=callback&wd=" + this.searchBoxSyncString,
-                        { jsonpCallbackFunction: "callback" }
+                        "https://suggestion.baidu.com/su?wd=" + this.searchBoxSyncString,
+                        { jsonpCallback: "cb" }
                     )
                         .then(function (res) {
                             return res.json();
@@ -145,8 +145,8 @@ export default {
 
                 case "microsoft-bing":
                     FetchJsonp(
-                        "https://api.bing.com/qsonhs.aspx?type=cb&cb=callback&q=" + this.searchBoxSyncString,
-                        { jsonpCallbackFunction: "callback" }
+                        "https://api.bing.com/qsonhs.aspx?type=cb&q=" + this.searchBoxSyncString,
+                        { jsonpCallback: "cb" }
                     )
                     .then(function (response) {
                         return response.json()
@@ -167,8 +167,8 @@ export default {
 
                 case "google":
                     FetchJsonp(
-                        "https://suggestqueries.google.com/complete/search?client=youtube&jsonp=callback&q=" + this.searchBoxSyncString,
-                        { jsonpCallbackFunction: "callback" }
+                        "https://suggestqueries.google.com/complete/search?client=youtube&q=" + this.searchBoxSyncString,
+                        { jsonpCallback: "jsonp" }
                     )
                     .then(function (response) {
                         return response.json();
