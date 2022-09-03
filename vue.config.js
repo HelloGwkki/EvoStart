@@ -14,9 +14,6 @@ module.exports = defineConfig({
         port: 1145,
         client: {
             webSocketURL: "ws://0.0.0.0:1145/ws"
-        },
-        headers: {
-            'Access-Control-Allow-Origin': '*'
         }
     },
 

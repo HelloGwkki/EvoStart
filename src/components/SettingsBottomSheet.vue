@@ -107,7 +107,7 @@ export default {
         reversePage() {
                 animate(
                     "#app",
-                    { transform: "rotate(180deg)" },
+                    { transform: "rotate(720deg)" },
                     { duration: 6 }
                 );
             this.reverseBtnDisable = true
