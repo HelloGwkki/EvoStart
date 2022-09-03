@@ -41,6 +41,9 @@
                     </v-btn-toggle>
                 </v-list-item>
 
+                <HomepageClock class="d-flex justify-center" />
+
+
                 <v-subheader>
                     <v-icon>mdi-beaker</v-icon>
                     实验室
@@ -62,15 +65,11 @@
                     class="text-center"
                     cols="12"
                     >
-                    纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作
+                    纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作 - {{ gitBranch }}@{{ gitCommitHash }}
                     <br />
-                    <v-btn href="https://github.com/HelloGwkki" target="_blank" text>
+                    <v-btn href="https://github.com/HelloGwkki/EvoStart" target="_blank" text>
                         <v-icon>mdi-github</v-icon>
                         <span>Github</span>
-                    </v-btn>
-                    <v-btn href="https://twitter.com/chunchaqwq" target="_blank" color="#00acee" text>
-                        <v-icon>mdi-twitter</v-icon>
-                        <span>Twitter</span>
                     </v-btn>
                     </v-col>
                 </v-footer>
@@ -80,6 +79,8 @@
 </template>
 
 <script>
+import HomepageClock from "./HomepageClock.vue";
+
 import { animate } from 'motion';
 
 export default {
@@ -88,8 +89,14 @@ export default {
     data() {
         return {
             timeDisplayToModel: this.$cookies.get("timeDisplayTo"),
-            reverseBtnDisable: false
+            reverseBtnDisable: false,
+            gitBranch: process.env.GIT_BRANCH,
+            gitCommitHash: process.env.GIT_COMMITHASH.substring(0, 6)
         }
+    },
+
+    components: {
+        HomepageClock
     },
 
     methods: {
@@ -100,7 +107,7 @@ export default {
         reversePage() {
                 animate(
                     "#app",
-                    { transform: "rotate(180deg)" },
+                    { transform: "rotate(720deg)" },
                     { duration: 6 }
                 );
             this.reverseBtnDisable = true
@@ -114,7 +121,7 @@ export default {
             },
 
             set(newVal) {
-                this.$store.commit("changeBottomSheetModel")
+                this.$store.commit("toggleBottomSheetModel")
             }
         }
     }

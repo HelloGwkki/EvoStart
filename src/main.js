@@ -6,12 +6,14 @@ import App from './App.vue'
 import router from './router/router'
 import store from "./store"
 
+
 Vue.use(VueCookies)
+
 
 Vue.config.productionTip = false
 
 console.log('%c Thanks for using! - Chuncha 💖', 'background-color: #000; color: #fff; font-size:25px');
-console.log('-> Github: https://github.com/HelloGwkki/homepage <-');
+console.log('-> Github: https://github.com/HelloGwkki/EvoStart <-');
 
 new Vue({
   vuetify,
