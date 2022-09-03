@@ -41,6 +41,9 @@
                     </v-btn-toggle>
                 </v-list-item>
 
+                <HomepageClock class="d-flex justify-center" />
+
+
                 <v-subheader>
                     <v-icon>mdi-beaker</v-icon>
                     实验室
@@ -76,6 +79,8 @@
 </template>
 
 <script>
+import HomepageClock from "./HomepageClock.vue";
+
 import { animate } from 'motion';
 
 export default {
@@ -86,6 +91,10 @@ export default {
             timeDisplayToModel: this.$cookies.get("timeDisplayTo"),
             reverseBtnDisable: false
         }
+    },
+
+    components: {
+        HomepageClock
     },
 
     methods: {
