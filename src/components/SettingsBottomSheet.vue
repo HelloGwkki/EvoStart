@@ -119,7 +119,7 @@ export default {
             },
 
             set(newVal) {
-                this.$store.commit("changeBottomSheetModel")
+                this.$store.commit("toggleBottomSheetModel")
             }
         }
     }
