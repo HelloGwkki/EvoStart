@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { useDebounceFn } from '@vueuse/shared';
+import { useThrottleFn } from '@vueuse/shared';
 import FetchJsonp from "fetch-jsonp";
 
 
@@ -118,7 +118,7 @@ export default {
             this.searchEngine = s;
         },
 
-        searchBoxAutoComplete: useDebounceFn(function () {
+        searchBoxAutoComplete: useThrottleFn(function () {
             let that = this
 
             if (that.searchBoxSyncString == "" || /^\s+$/g.test(that.searchBoxText)) {
