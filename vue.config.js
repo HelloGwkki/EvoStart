@@ -18,7 +18,7 @@ module.exports = defineConfig({
   chainWebpack: (config) => {
     config.plugin('html')
           .tap((args) => {
-            args[0].title = "春茶の主页";
+            args[0].title = "EvoStart";
             return args;
           });
   }

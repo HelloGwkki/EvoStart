@@ -64,13 +64,9 @@
                     >
                     纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作
                     <br />
-                    <v-btn href="https://github.com/HelloGwkki" target="_blank" text>
+                    <v-btn href="https://github.com/HelloGwkki/EvoStart" target="_blank" text>
                         <v-icon>mdi-github</v-icon>
                         <span>Github</span>
-                    </v-btn>
-                    <v-btn href="https://twitter.com/chunchaqwq" target="_blank" color="#00acee" text>
-                        <v-icon>mdi-twitter</v-icon>
-                        <span>Twitter</span>
                     </v-btn>
                     </v-col>
                 </v-footer>

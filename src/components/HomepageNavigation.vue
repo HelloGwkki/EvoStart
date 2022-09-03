@@ -2,7 +2,7 @@
     <div>
         <v-toolbar id="appbar">
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-            <v-toolbar-title>春茶の主页</v-toolbar-title>
+            <v-toolbar-title>EvoStart</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
@@ -19,7 +19,7 @@
         <v-navigation-drawer v-model="drawer" app temporary>
             <v-card class="mx-auto" tile flat>
                 <v-img src="https://img1.imgtp.com/2022/08/27/zp6XB0S0.jpg">
-                    <v-card-text class="white--text text-h5 mt-16">春茶の主页</v-card-text>
+                    <v-card-text class="white--text text-h5 mt-16">EvoStart</v-card-text>
                 </v-img>
             </v-card>
             <v-list nav dense>
@@ -61,8 +61,6 @@
 </template>
 
 <script>
-
-
 export default {
     name: "HomepageNavigation",
 
@@ -94,7 +92,7 @@ export default {
         },
         
         changeBottomSheetModel() {
-            this.$store.commit("changeBottomSheetModel");
+            this.$store.commit("toggleBottomSheetModel");
             this.drawer = false;
         }
     },

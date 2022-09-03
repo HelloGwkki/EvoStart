@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { usePreferredDark } from "@vueuse/core";
 
 Vue.use(Vuex)
 
@@ -9,7 +8,7 @@ export default new Vuex.Store({
         bottomSheetModel: false
     },
     mutations: {
-        changeBottomSheetModel(state){
+        toggleBottomSheetModel(state){
             state.bottomSheetModel = !state.bottomSheetModel;
         }
     },
