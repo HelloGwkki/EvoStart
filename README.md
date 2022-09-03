@@ -11,7 +11,7 @@
 1. 拉取仓库
     
     ```sh
-    $ git clone https://github.com/evostart/startpage.git
+    $ git clone https://github.com/HelloGwkki/EvoStart.git
     ```
 
 2. 安装依赖
