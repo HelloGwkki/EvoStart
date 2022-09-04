@@ -62,10 +62,6 @@
                     >
                     纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作
                     <br />
-                    <span id="busuanzi_container_site_pv">
-                        本站总访问量<span id="busuanzi_value_site_pv"></span>次
-                    </span>
-                    <br />
                     <v-btn href="https://github.com/HelloGwkki/EvoStart" target="_blank" text>
                         <v-icon>mdi-github</v-icon>
                         <span>Github</span>
