@@ -6,7 +6,7 @@
                     <div style="height:70px"></div>
                     <span class="text-h4 red--text">404 | File Not Not Not Found</span>
                     <div style="height:50px"></div>
-                    <v-btn class="success" id="fnfp-btn-anim" to="/search">我不打扰</v-btn>
+                    <v-btn class="primary" id="fnfp-btn-anim" to="/search">我不打扰</v-btn>
                     <div style="height:70px"></div>
                 </v-card>
             </v-flex>

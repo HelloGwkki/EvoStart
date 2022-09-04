@@ -1,8 +1,18 @@
 <style>
-@import "./assets/style/style.css";
+::-webkit-scrollbar {
+    display: none;
+}
+
+.theme--light .v-application--wrap {
+    background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-image: url("https://img1.imgtp.com/2022/08/27/CGVRkqtn.png") !important;
+}
 </style>
 <template>
-    <v-app>
+    <v-app id="app">
         <!--navigation bar and drawer-->
         <HomepageNavigation />
 
@@ -46,6 +56,11 @@ export default {
 </script>
 
 <style scoped>
+#routerView {
+    height: 100%;
+    width: 100%;
+}
+
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 300ms ease;

@@ -30,7 +30,7 @@ export default {
         animate(
             "#hitokoto",
             { opacity: 1 },
-            { delay: .5, duration:.2 }
+            { delay: .2, duration:.5 }
         )
     }
 }

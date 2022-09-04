@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation id="bottomNav" v-model="bottomNavigationModel" grow shift>
+    <v-bottom-navigation id="bottomNav" color="primary" v-model="bottomNavigationModel" grow shift flat>
         <v-btn to="/collections">
             <span>收藏</span>
 
@@ -32,3 +32,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+#bottomNav {
+    background-color: rgba(255, 255, 255, 0);
+}
+</style>

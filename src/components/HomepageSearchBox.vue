@@ -191,6 +191,7 @@ export default {
                     console.error("错误的搜索引擎");
             }
 
+            this.searchBoxSuggestItems.push(this.searchBoxSyncString)
             this.searchBoxLoading = false
         }, 400)
     }

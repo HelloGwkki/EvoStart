@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-toolbar id="appbar">
+        <v-toolbar id="appbar" dark flat>
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
             <v-toolbar-title>EvoStart</v-toolbar-title>
             <v-spacer></v-spacer>
@@ -17,10 +17,13 @@
         </v-toolbar>
 
         <v-navigation-drawer v-model="drawer" app temporary>
-            <v-card class="mx-auto" tile flat>
-                <v-img src="https://img1.imgtp.com/2022/08/27/zp6XB0S0.jpg">
-                    <v-card-text class="white--text text-h5 mt-16">EvoStart</v-card-text>
-                </v-img>
+            <v-card class="primary" tile flat>
+                <v-card-title class="white--text text-h5">EvoStart</v-card-title>
+                <v-card-actions>
+                    <v-btn color="white" :href="'https://github.com/HelloGwkki/EvoStart/commit/' + gitHash" text>
+                        v{{ VERSION }}@{{ gitHash }}
+                    </v-btn>
+                </v-card-actions>
             </v-card>
             <v-list nav dense>
                 <v-list-item-group v-model="group">
@@ -34,22 +37,22 @@
                     </v-list-item>
                 </v-list-item-group>
                 <v-list-item @click="drawerItemClicked('easterEgg')">
-                        <v-list-item-icon>
-                            <v-icon>mdi-egg-easter</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>
-                            彩蛋
-                        </v-list-item-title>
+                    <v-list-item-icon>
+                        <v-icon>mdi-egg-easter</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>
+                        彩蛋
+                    </v-list-item-title>
                 </v-list-item>
             </v-list>
             <template v-slot:append>
                 <div class="pa-2">
-                    <v-btn block class="success" @click="changeBottomSheetModel">
-                    <v-icon>
-                        mdi-cog
-                    </v-icon>
-                    设置
-                </v-btn>
+                    <v-btn color="primary" @click="changeBottomSheetModel" block outlined>
+                        <v-icon>
+                            mdi-cog
+                        </v-icon>
+                        设置
+                    </v-btn>
                 </div>
             </template>
         </v-navigation-drawer>
@@ -61,14 +64,19 @@
 </template>
 
 <script>
+import config from "../../package.json";
+
 export default {
     name: "HomepageNavigation",
 
     data: () => ({
+        VERSION: config.version,
         drawer: false,
         group: null,
         snackbar: false,
         snackbarText: "",
+        gitBranch: process.env.GIT_BRANCH,
+        gitHash: process.env.GIT_COMMITHASH.substring(0, 6)
     }),
 
     mounted() {
@@ -90,7 +98,7 @@ export default {
                 window.location.href = "https://b23.tv/BV1GJ411x7h7"
             }
         },
-        
+
         changeBottomSheetModel() {
             this.$store.commit("toggleBottomSheetModel");
             this.drawer = false;
@@ -98,3 +106,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+#appbar {
+    background-color: rgba(255, 255, 255, 0);
+}
+</style>
