@@ -1,6 +1,14 @@
 <template>
-    <v-card>
-        <p class="red--text" id="ani" style="font-size: 100px">急</p>
+    <v-card color="rgba(0,0,0,0)" flat>
+        <div class="red--text d-flex justify-center tp-ani" style="font-size: 100px">
+            ❌
+        </div>
+        <div class="red--text d-flex justify-center tp-ani" style="font-size: 100px">
+            ➕
+        </div>
+        <div class="red--text d-flex justify-center tp-ani" style="font-size: 100px">
+            ❌
+        </div>
     </v-card>
 </template>
 
@@ -12,8 +20,8 @@ export default {
 
     mounted() {
         animate(
-            "#ani",
-            { transform: "rotate(360deg)" },
+            ".tp-ani",
+            { transform: "rotate(90deg)" },
             { duration: .5, repeat: Infinity }
         )
     }

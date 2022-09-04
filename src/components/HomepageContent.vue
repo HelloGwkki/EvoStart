@@ -30,3 +30,14 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+#HomepageContent {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.theme--light #HomepageContent {
+    background-color: rgba(255, 255, 255, .8);
+}
+</style>

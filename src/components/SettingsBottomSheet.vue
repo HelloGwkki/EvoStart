@@ -12,9 +12,7 @@
                         mdi-alert
                     </v-icon>
                     部分设置更改后可能需要重载页面（心虚）
-                    <template v-slot:actions="{ dismiss }">
-                        <v-btn color="primary" @click="dismiss">Sodayo</v-btn>
-                    </template>
+                    <v-btn class="d-flex justify-end" color="primary" @click="refreshPage">快端上来罢</v-btn>
                 </v-banner>
 
                 <v-subheader>
@@ -41,9 +39,6 @@
                     </v-btn-toggle>
                 </v-list-item>
 
-                <HomepageClock class="d-flex justify-center" />
-
-
                 <v-subheader>
                     <v-icon>mdi-beaker</v-icon>
                     实验室
@@ -65,7 +60,11 @@
                     class="text-center"
                     cols="12"
                     >
-                    纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作 - {{ gitBranch }}@{{ gitCommitHash }}
+                    纯春茶用 <v-icon color="red">mdi-heart</v-icon> 制作
+                    <br />
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
                     <br />
                     <v-btn href="https://github.com/HelloGwkki/EvoStart" target="_blank" text>
                         <v-icon>mdi-github</v-icon>
@@ -79,7 +78,6 @@
 </template>
 
 <script>
-import HomepageClock from "./HomepageClock.vue";
 
 import { animate } from 'motion';
 
@@ -89,14 +87,8 @@ export default {
     data() {
         return {
             timeDisplayToModel: this.$cookies.get("timeDisplayTo"),
-            reverseBtnDisable: false,
-            gitBranch: process.env.GIT_BRANCH,
-            gitCommitHash: process.env.GIT_COMMITHASH.substring(0, 6)
+            reverseBtnDisable: false
         }
-    },
-
-    components: {
-        HomepageClock
     },
 
     methods: {
@@ -107,10 +99,16 @@ export default {
         reversePage() {
                 animate(
                     "#app",
-                    { transform: "rotate(720deg)" },
-                    { duration: 6 }
+                    { transform: "rotate(200deg)" },
+                    { duration: 3 }
                 );
             this.reverseBtnDisable = true
+        },
+
+        refreshPage() {
+            this.$nextTick(() => {
+                window.location.reload()
+            })
         }
     },
 
