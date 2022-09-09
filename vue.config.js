@@ -9,14 +9,6 @@ module.exports = defineConfig({
         'vuetify'
     ],
 
-    devServer: {
-        host: "0.0.0.0",
-        port: 1145,
-        client: {
-            webSocketURL: "ws://0.0.0.0:1145/ws"
-        }
-    },
-
     chainWebpack: (config) => {
         config.plugin('html')
             .tap((args) => {

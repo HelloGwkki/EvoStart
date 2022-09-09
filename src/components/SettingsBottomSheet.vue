@@ -12,7 +12,9 @@
                         mdi-alert
                     </v-icon>
                     部分设置更改后可能需要重载页面（心虚）
-                    <v-btn class="d-flex justify-end" color="primary" @click="refreshPage">快端上来罢</v-btn>
+                    <template v-slot:actions>
+                        <v-btn class="d-flex justify-end" color="primary" @click="refreshPage">快端上来罢</v-btn>
+                    </template>
                 </v-banner>
 
                 <v-subheader>
