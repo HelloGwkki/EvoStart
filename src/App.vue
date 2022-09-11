@@ -1,16 +1,3 @@
-<style>
-::-webkit-scrollbar {
-    display: none;
-}
-
-.theme--light .v-application--wrap {
-    background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-    background-image: url("https://img1.imgtp.com/2022/08/27/CGVRkqtn.png") !important;
-}
-</style>
 <template>
     <v-app id="app">
         <!--navigation bar and drawer-->
@@ -28,7 +15,10 @@
 
         <!--Bottom Sheet-->
         <SettingsBottomSheet />
-        
+
+        <!--Allow Cookies Dialog-->
+        <AllowCookiesDialog />
+
     </v-app>
 </template>
 
@@ -36,7 +26,7 @@
 import HomepageNavigation from "@/components/HomepageNavigation.vue";
 import BottomNavigation from "@/components/BottomNavigation.vue";
 import SettingsBottomSheet from "@/components/SettingsBottomSheet.vue";
-
+import AllowCookiesDialog from "./components/AllowCookiesDialog.vue";
 
 export default {
     name: 'App',
@@ -44,7 +34,8 @@ export default {
     components: {
         HomepageNavigation,
         BottomNavigation,
-        SettingsBottomSheet
+        SettingsBottomSheet,
+        AllowCookiesDialog
     },
 
     computed: {
@@ -70,4 +61,19 @@ export default {
 .fade-leave-to {
     opacity: 0;
 }
+</style>
+
+<!--General-->
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .theme--light .v-application--wrap {
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("https://s1.ax1x.com/2022/09/12/vXm5h6.png") !important;
+    }
 </style>
