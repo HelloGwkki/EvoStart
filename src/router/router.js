@@ -4,6 +4,7 @@ import Router from "vue-router"
 import HomePage from "@/pages/HomePage.vue";
 import ToolsPage from "@/pages/ToolsPage.vue";
 import FileNotFoundPage from "@/pages/FileNotFoundPage.vue"
+import TranslateTool from "@/pages/tools/translate.vue"
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
             path: "/404",
             name: "FileNotFoundPage",
             component: FileNotFoundPage
+        },
+        {
+            path: "/tools/translate",
+            name: "TranslatePage",
+            component: TranslateTool
         },
         {
             path: "*",
