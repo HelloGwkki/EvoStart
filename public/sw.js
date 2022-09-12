@@ -1,5 +1,6 @@
 'use strict';
-//使用阿里的CDN
+
+
 importScripts('https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js');
 
 workbox.setConfig({
@@ -11,61 +12,32 @@ if (workbox) {
 } else {
   console.warn(`🤔 | Boo! Workbox didn't load`);
 }
+
+//css
 workbox.routing.registerRoute(
-  // Cache CSS files
   /.*\.css/,
-  // 使用缓存，但尽快在后台更新
   workbox.strategies.staleWhileRevalidate({
-    // 使用自定义缓存名称
     cacheName: 'css-cache',
   })
 );
+//js
 workbox.routing.registerRoute(
-  // 缓存JS文件
   /.*\.js/,
-  // 使用缓存，但尽快在后台更新
   workbox.strategies.staleWhileRevalidate({
-    // 使用自定义缓存名称
     cacheName: 'js-cache',
   })
 );
+//image
 workbox.routing.registerRoute(
-    // 缓存图片.
     /.*\.(png|jpg|jpeg|svg|ico)/,
-    // 使用缓存，但尽快在后台更新
-    workbox.strategies.staleWhileRevalidate({
-      // 使用自定义缓存名称
-      cacheName: 'js-cache',
+    workbox.strategies.cacheFirst({
+      cacheName: 'img-cache',
     })
 );
-
-// 模型缓存
+//index.html
 workbox.routing.registerRoute(
-  new RegExp('http://tile.railplus.com/'),
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: 'model-cache',
-  })
-);
-
-// 模型缓存
-workbox.routing.registerRoute(
-  new RegExp('.+\.b3dm$'),
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: 'model-cache',
-  })
-);
-
-// 模型缓存
-workbox.routing.registerRoute(
-  new RegExp('.+\.gltf$'),
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: 'model-cache',
-  })
-);
-// 模型缓存
-workbox.routing.registerRoute(
-  new RegExp('.+\.glb$'),
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: 'model-cache',
+  /index\.html/,
+  workbox.strategies.networkFirst({
+    cacheName: 'html-cache',
   })
 );
