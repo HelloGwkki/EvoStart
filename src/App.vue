@@ -74,6 +74,6 @@ export default {
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url("img/background.png") !important;
+        background-image: url("img/background.jpg") !important;
     }
 </style>
