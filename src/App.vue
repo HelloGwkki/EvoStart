@@ -74,6 +74,6 @@ export default {
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url("https://s1.ax1x.com/2022/09/12/vXm5h6.png") !important;
+        background-image: url("img/background.png") !important;
     }
 </style>

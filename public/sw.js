@@ -7,9 +7,9 @@ workbox.setConfig({
 });
 
 if (workbox) {
-  console.log(`Yay! Workbox is loaded`);
+  console.log(`✨Yay! Workbox is loaded✨`);
 } else {
-  console.log(`Boo! Workbox didn't load`);
+  console.warn(`🤔 | Boo! Workbox didn't load`);
 }
 workbox.routing.registerRoute(
   // Cache CSS files
@@ -28,6 +28,15 @@ workbox.routing.registerRoute(
     // 使用自定义缓存名称
     cacheName: 'js-cache',
   })
+);
+workbox.routing.registerRoute(
+    // 缓存 background.png.
+    new RegExp("background.png"),
+    // 使用缓存，但尽快在后台更新
+    workbox.strategies.staleWhileRevalidate({
+      // 使用自定义缓存名称
+      cacheName: 'js-cache',
+    })
 );
 
 // 模型缓存
@@ -60,19 +69,3 @@ workbox.routing.registerRoute(
     cacheName: 'model-cache',
   })
 );
-
-// workbox.routing.registerRoute(
-//   // 缓存gravatar文件
-//   new RegExp('https://cdn\.v2ex\.com/'),
-//   // 如果缓存可用，请使用它
-//   workbox.strategies.cacheFirst({
-//     // 使用自定义缓存名称
-//     cacheName: 'gravatar-cache',
-//     plugins: [
-//       new workbox.expiration.Plugin({
-//         // 缓存最多30天
-//         maxAgeSeconds: 30 * 24 * 60 * 60,
-//       })
-//     ],
-//   })
-// );
