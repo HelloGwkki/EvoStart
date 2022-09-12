@@ -17,9 +17,9 @@ console.log('-> Github: https://github.com/HelloGwkki/EvoStart <-');
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(function (registration) {
-    console.log('Registration successful, scope is:', registration.scope);
+    console.log('✔ | Registration successful, scope is:', registration.scope);
   }).catch(function (error) {
-    console.log('Service Worker registration failed, error:', error);
+    console.warn('Service Worker registration failed, error:', error);
   });
 }
 
