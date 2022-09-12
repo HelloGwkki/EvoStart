@@ -30,8 +30,8 @@ workbox.routing.registerRoute(
   })
 );
 workbox.routing.registerRoute(
-    // 缓存 background.png.
-    new RegExp("background.png"),
+    // 缓存图片.
+    /.*\.(png|jpg|jpeg|svg|ico)/,
     // 使用缓存，但尽快在后台更新
     workbox.strategies.staleWhileRevalidate({
       // 使用自定义缓存名称
