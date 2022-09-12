@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { useDebounceFn, useClipboard } from "@vueuse/core";
+import { useThrottleFn, useClipboard } from "@vueuse/core";
 import { ref } from "vue";
 
 const clipSource = ref('resultBox')
@@ -71,7 +71,7 @@ export default {
     },
 
     watch: {
-        sourceBoxModel: useDebounceFn(function(){
+        sourceBoxModel: useThrottleFn(function(){
             let that = this
 
             //TODO: Support type arg
@@ -90,7 +90,7 @@ export default {
                     that.resultBoxModel = `😥 | Something went wrong.\n---\n${reason}\n---`;
                 })
             } else { return; }
-        }, 300)
+        }, 400)
     },
 }
 </script>
