@@ -13,6 +13,14 @@ if (workbox) {
   console.warn(`🤔 | Boo! Workbox didn't load`);
 }
 
+
+workbox.routing.registerRoute(
+  /index\.html/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'html-cache',
+  })
+);
+
 //css
 workbox.routing.registerRoute(
   /.*\.css/,
@@ -27,17 +35,11 @@ workbox.routing.registerRoute(
     cacheName: 'js-cache',
   })
 );
-//image
+
+
 workbox.routing.registerRoute(
     /.*\.(png|jpg|jpeg|svg|ico)/,
-    workbox.strategies.cacheFirst({
+    workbox.strategies.cacheOnly({
       cacheName: 'img-cache',
     })
-);
-//index.html
-workbox.routing.registerRoute(
-  /index\.html/,
-  workbox.strategies.networkFirst({
-    cacheName: 'html-cache',
-  })
 );
