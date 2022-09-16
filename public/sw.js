@@ -39,7 +39,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     /.*\.(png|jpg|jpeg|svg|ico)/,
-    workbox.strategies.CacheFrist({
+    workbox.strategies.staleWhileRevalidate({
       cacheName: 'img-cache',
     })
 );
