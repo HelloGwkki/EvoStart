@@ -26,18 +26,14 @@ export default new Router({
             component: ToolsPage
         },
         {
-            path: "/404",
-            name: "FileNotFoundPage",
-            component: FileNotFoundPage
-        },
-        {
             path: "/tools/translate",
             name: "TranslatePage",
             component: TranslateTool
         },
         {
             path: "*",
-            redirect: "/404"
+            name: "404",
+            component: FileNotFoundPage
         }
     ]
 })
