@@ -81,7 +81,7 @@ export default {
                     return res.json();
                 })
                 .then(function (json) {
-                    return json["data"]["translateResult"][0][0]["tgt"];
+                    return json["translateResult"][0][0]["tgt"];
                 })
                 .then(function(data) {
                     that.resultBoxModel = data;
