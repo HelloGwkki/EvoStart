@@ -4,7 +4,7 @@
 importScripts('https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js');
 
 workbox.setConfig({
-  modulePathPrefix: 'https://g.alicdn.com/kg/workbox/3.3.0/'
+  debug: true
 });
 
 if (workbox) {
@@ -39,7 +39,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     /.*\.(png|jpg|jpeg|svg|ico)/,
-    workbox.strategies.cacheFrist({
+    workbox.strategies.CacheFrist({
       cacheName: 'img-cache',
     })
 );
