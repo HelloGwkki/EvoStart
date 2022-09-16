@@ -3,9 +3,7 @@
 
 importScripts('https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js');
 
-workbox.setConfig({
-  debug: true
-});
+workbox.setConfig();
 
 if (workbox) {
   console.log(`✨Yay! Workbox is loaded✨`);
