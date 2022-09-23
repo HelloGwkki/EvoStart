@@ -6,9 +6,11 @@
         <!--Padding for appbar-->
         <div :style="{ 'padding-top': toolbarHeight + 'px' }"></div>
 
-        <transition name="fade" mode="out-in">
-            <router-view id="routerView"></router-view>
-        </transition>
+        <v-main>
+            <transition name="fade" mode="out-in">
+                <router-view id="routerView"></router-view>
+            </transition>
+        </v-main>
 
         <!--bottom navigation bar-->
         <BottomNavigation />
@@ -65,15 +67,15 @@ export default {
 
 <!--General-->
 <style>
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .theme--light .v-application--wrap {
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url("img/background.jpg") !important;
-    }
+::-webkit-scrollbar {
+    display: none;
+}
+
+.theme--light .v-application--wrap {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("img/background.jpg") !important;
+}
 </style>
