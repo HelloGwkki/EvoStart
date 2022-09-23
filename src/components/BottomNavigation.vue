@@ -29,6 +29,24 @@ export default {
         return {
             bottomNavigationModel: 1
         }
+    },
+
+    watch: {
+        $route(to, from){
+            switch (to.path) {
+                case "/search":
+                    this.bottomNavigationModel = 1
+                    break;
+                
+                case "/tools":
+                    this.bottomNavigationModel = 2
+                    break;
+
+                default:
+                    this.bottomNavigationModel = 2
+                    break;
+            }
+        }
     }
 }
 </script>

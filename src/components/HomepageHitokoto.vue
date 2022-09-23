@@ -19,7 +19,7 @@ export default {
 
     mounted() { 
         let that = this
-        fetch("https://v1.hitokoto.cn/?c=a&c=c&c=i&c=h&encode=text").then(function (response) {
+        fetch("https://v1.hitokoto.cn/?encode=text").then(function (response) {
             return response.blob();
         }).then(function(response) {
             return response.text();

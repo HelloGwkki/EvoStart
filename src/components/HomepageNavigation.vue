@@ -2,7 +2,7 @@
     <div>
         <v-toolbar id="appbar" dark flat>
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-            <v-toolbar-title>EvoStart</v-toolbar-title>
+            <v-toolbar-title id="appbarTitle">EvoStart</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
@@ -110,5 +110,9 @@ export default {
 <style scoped>
 #appbar {
     background-color: rgba(255, 255, 255, 0);
+}
+
+#appbarTitle {
+    font-family: 'Righteous', cursive;
 }
 </style>
