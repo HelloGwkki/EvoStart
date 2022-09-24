@@ -9,6 +9,9 @@
         "src/*"
       ]
     },
+    "types": [
+      "vuetify"
+    ],
     "lib": [
       "esnext",
       "dom",
