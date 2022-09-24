@@ -1,6 +1,6 @@
 <template>
     <v-app id="app">
-        <!--navigation bar and drawer-->
+            <!--navigation bar and drawer-->
         <HomepageNavigation />
 
         <!--Padding for appbar-->
@@ -28,7 +28,7 @@
 import HomepageNavigation from "@/components/HomepageNavigation.vue";
 import BottomNavigation from "@/components/BottomNavigation.vue";
 import SettingsBottomSheet from "@/components/SettingsBottomSheet.vue";
-import AllowCookiesDialog from "./components/AllowCookiesDialog.vue";
+import AllowCookiesDialog from "@/components/AllowCookiesDialog.vue";
 
 export default {
     name: 'App',
@@ -56,7 +56,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 300ms ease;
+    transition: opacity 150ms ease;
 }
 
 .fade-enter,

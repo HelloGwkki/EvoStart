@@ -2,7 +2,7 @@
     <v-container bg grid-list-md text-xs-center fill-height>
         <v-layout row wrap align-center>
             <v-flex>    
-                <v-card class="rounded-lg text-center">
+                <v-card id="fnnf-dialog" class="rounded-lg text-center" max-width="1000">
                     <div style="height:70px"></div>
                     <span class="text-h4 red--text">404 | File Not Not Not Found</span>
                     <div style="height:50px"></div>
@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+#fnnf-dialog {
+    margin: 0 auto;
+}
 
 #fnfp-btn-anim {
     opacity: 0;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-toolbar id="appbar" dark flat>
+        <v-app-bar id="appbar" dark app flat>
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
             <v-toolbar-title id="appbarTitle">EvoStart</v-toolbar-title>
             <v-spacer></v-spacer>
@@ -14,9 +14,9 @@
                 </template>
                 <span>切换至{{ $vuetify.theme.dark ? "亮色" : "暗色" }}模式</span>
             </v-tooltip>
-        </v-toolbar>
+        </v-app-bar>
 
-        <v-navigation-drawer v-model="drawer" app temporary>
+        <v-navigation-drawer v-model="drawer" app temporary absolute>
             <v-card class="primary" tile flat>
                 <v-card-title class="white--text text-h5">EvoStart</v-card-title>
                 <v-card-actions>

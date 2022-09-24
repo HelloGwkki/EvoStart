@@ -8,6 +8,8 @@
                     <HomepageClock />
                     <div style="height:5px;"></div>
                     <HomepageHitokoto />
+                    <div style="height:5px;"></div>
+                    <MobileDeviceAlert />
                     <div style="height:50px;"></div>
                 </v-card>
             </v-flex>
@@ -19,6 +21,7 @@
 import HomepageClock from "./HomepageClock.vue";
 import HomepageHitokoto from "./HomepageHitokoto.vue";
 import HomepageSearchBox from "./HomepageSearchBox.vue";
+import MobileDeviceAlert from "./MobileDeviceAlert.vue";
 
 export default {
     name: "HomepageContent",
@@ -26,7 +29,8 @@ export default {
     components: {
         HomepageClock,
         HomepageSearchBox,
-        HomepageHitokoto
+        HomepageHitokoto,
+        MobileDeviceAlert
     },
 }
 </script>
