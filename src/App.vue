@@ -64,18 +64,3 @@ export default {
     opacity: 0;
 }
 </style>
-
-<!--General-->
-<style>
-::-webkit-scrollbar {
-    display: none;
-}
-
-.theme--light .v-application--wrap {
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("img/background.jpg") !important;
-}
-</style>

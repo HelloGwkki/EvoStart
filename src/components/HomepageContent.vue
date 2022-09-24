@@ -39,5 +39,6 @@ export default {
 
 .theme--light #HomepageContent {
     background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(12px);
 }
 </style>

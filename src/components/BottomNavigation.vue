@@ -52,7 +52,8 @@ export default {
 </script>
 
 <style scoped>
-#bottomNav {
-    background-color: rgba(255, 255, 255, 0);
+.theme--light #bottomNav {
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(5px);
 }
 </style>
