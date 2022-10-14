@@ -186,9 +186,6 @@ export default {
                         }
                     })
                     break;
-
-                default: // unexcepted
-                    console.error("错误的搜索引擎");
             }
 
             this.searchBoxSuggestItems.push(this.searchBoxSyncString)
