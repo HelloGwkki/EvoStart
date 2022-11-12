@@ -6,7 +6,9 @@
             <v-menu transition="slide-y-transition">
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn icon v-ripple="{ center: true }" v-bind="attrs" v-on="on" fab>
-                        <v-icon>mdi-{{ searchEngine == "baidu" ? "alien" : searchEngine }}</v-icon>
+                        <BaiduIcon         v-if="searchEngine == 'baidu'" />
+                        <MicrosoftBingIcon v-else-if="searchEngine == 'microsoft-bing'" />
+                        <GoogleIcon        v-else-if="searchEngine == 'google'" />
                     </v-btn>
                 </template>
                 <v-list>
@@ -17,7 +19,7 @@
                     <v-list-item-group>
                         <v-list-item @click="setSearchEngine('baidu')">
                             <v-list-item-icon>
-                                <v-icon>mdi-alien</v-icon>
+                                <BaiduIcon />
                             </v-list-item-icon>
                             <v-list-item-content>
                                 <v-list-item-title>
@@ -27,7 +29,7 @@
                         </v-list-item>
                         <v-list-item @click="setSearchEngine('microsoft-bing')">
                             <v-list-item-icon>
-                                <v-icon>mdi-microsoft-bing</v-icon>
+                                <MicrosoftBingIcon />
                             </v-list-item-icon>
                             <v-list-item-content>
                                 <v-list-item-title>
@@ -37,7 +39,7 @@
                         </v-list-item>
                         <v-list-item @click="setSearchEngine('google')">
                             <v-list-item-icon>
-                                <v-icon>mdi-google</v-icon>
+                                <GoogleIcon />
                             </v-list-item-icon>
                             <v-list-item-content>
                                 <v-list-item-title>
@@ -56,12 +58,19 @@
 </template>
 
 <script>
+import { BaiduIcon, MicrosoftBingIcon, GoogleIcon } from "vue-simple-icons";
 import { useThrottleFn } from '@vueuse/shared';
 import FetchJsonp from "fetch-jsonp";
 
 
 export default {
     name: "HomepageSearchBox",
+
+    components: {
+        BaiduIcon,
+        MicrosoftBingIcon,
+        GoogleIcon
+    },
 
     data() {
         return {
